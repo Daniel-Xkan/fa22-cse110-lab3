@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+        body {
+        font-family: "Audiowide", sans-serif;
+        }
+    </style>
+
     <title> pseudo meeting for non existant errands </title>
     <meta name = "description" content="css for lab3 cse110">
     <meta name="author" content="Xuechen(Daniel) Kan">
@@ -11,23 +18,30 @@
 
   <body>
     <header style="position: sticky; top: 40px; left: 40px;">
-        <h1>pseudo meeting for non existant errands</h1>
-        <h3 >Meeting minutes by <em>Xuechen Kan</em></h3>
-        <h3>OCT 6, 2022</h3>
+        <div class="container">
+            <h1>pseudo meeting for non existant errands</h1>
+            <h3 >Meeting minutes by <em>Xuechen Kan</em></h3>
+            <h3>OCT 6, 2022</h3>
+        </div>
         
         <hr>
     </header>
 
     <main>
-        <section>
-            <h3>Audio recording</h3>
-            <audio controls src="./rickroll.mp3"> Click here for conference recording</audio>
+        <section class="container">
+            <div >
+                <h3>Audio recording</h3>
+                <br>
+                <audio controls src="./rickroll.mp3"> Click here for conference recording</audio>
+            </div>
+
+            <div>
+                <h3>Video recording</h3>
+                <video controls src="./meeting.mp4" width="300" height="200"> Click here for conference recording</video>
+            </div>
         </section>
 
-        <section>
-            <h3>Video recording</h3>
-            <video controls src="./meeting.mp4" width="300" height="200"> Click here for conference recording</video>
-        </section>
+
         <br>
 
         <section>
@@ -42,9 +56,9 @@
 
         <h2>Attendence List</h2>
                 
-            <ul>
-                <li><i>Tom Hanks </i> </li>
-                <li>Justin Bieber</li>
+            <ul class="grid-container">
+                <li id="id">Tom Hanks </li>
+                <li target=" ">Justin Bieber</li>
                 <li>Tom Holland</li>
             </ul>
             
@@ -57,36 +71,46 @@
 
         <section>
             <h2>Agenda</h2>
-            <div>
-                <details>
-                    <summary>The meeting cover:</summary>
-                    blabl ablab lablabla blabla blablab lablab labal balba lbalba lbal balb albalb
-                </details>
+            <div class="container">
+                <div>
+                    <details>
+                        <summary>The meeting cover:</summary>
+                        <div class = "grid-container">
+                            <a> blablabla</a>
+                            <a> blablabla</a>
+                            <a> blablabla</a>
+                            <a> blablabla</a>
+                            <a> blablabla</a>
+                            <a> blablabla</a>
+                        </div>
+                    </details>
+                </div>
                 <br>
-                <form>
-                    <label>How do you think of the agenda today?</label>
-                    <input list="browsers" name="browser" id="browser">
-                    <datalist id="browsers">
-                        <option value="-">-</option>
-                        <option value="good">good</option>
-                        <option value="okayish">okayish</option>
-                        <option value="bad">bad</option>
-                        <input type="submit">
-                    </datalist>
-                </form>
+                <div>
+                    <form>
+                        <label>How do you think of the agenda today?</label>
+                        <input list="browsers" name="browser" id="browser">
+                        <datalist id="browsers">
+                            <option value="-">-</option>
+                            <option value="good">good</option>
+                            <option value="okayish">okayish</option>
+                            <option value="bad">bad</option>
+                            <input type="submit">
+                        </datalist>
+                    </form>
+                </div>
             </div>
         </section>
 
         <section>
             <h2>Unfinished Tasks</h2>
             <form>
-                <p>what to do next time:</p>
-                <input type="checkbox" name="errand1" checked>
-                <label> discuss about movies</label><br>
-                <input type="checkbox" name="errand2">
-                <label> discuss about books</label><br>
-                <input type="checkbox" name="errand3">
-                <label> discuss about assignments</label><br><br>
+                <p class="center large">what to do next time:</p>
+                <div class=" grid-container">
+                    <label> <input type="checkbox" name="errand1">discuss about movies</label><br>
+                    <label> <input type="checkbox" name="errand2">discuss about books</label><br>
+                    <label> <input type="checkbox" name="errand3">discuss about assignments</label><br><br>
+                </div>
                 <button>confirm planning</button>
             </form>
             <br>
@@ -136,8 +160,10 @@
 
     <hr>
     <footer>
-        <p>Author: Xuechen(Daniel) Kan</p>
-        <p><a href="mailto:xkan@ucsd.edu">xkan@ucsd.edu</a></p>
+        <div class="grid-container">
+            <div>Author: Xuechen(Daniel) Kan</div>
+            <div><a href="mailto:xkan@ucsd.edu">xkan@ucsd.edu</a></div>
+        </div>
     </footer>
 
   </body>
