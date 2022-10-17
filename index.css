@@ -1,5 +1,9 @@
 /* this is the start of css */
+* {
+    color:black;
+}
 body{
+    background-color: rgb(180, 204, 170);
     display: inline;
 }
 h1{
@@ -64,10 +68,118 @@ button:active{
     background-color: red;
 }
 
-.container>{
+.container>div{
+    justify-content:center;
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
+    flex-grow: auto;
+    flex-shrink: auto;
+    justify-content: flex-start;
+}
+
+.container{
+    justify-content:center;
+    display: flex;
+    flex-direction:row;
     flex-grow: 4;
     flex-shrink: 2;
     justify-content: flex-start;
+}
+
+.container>li{
+    background-color: rgb(185, 212, 130);
+    border: solid black;
+    text-align: center;
+
+    padding: 20px 20px 20px 20px;
+}
+
+.container>label{
+    background-color: yellowgreen;
+    border: solid black;
+    text-align: center;
+    justify-content: space-around;
+    padding: 1em 1em 1em 1em;
+}
+
+
+.container>div{
+    background-color: rgb(204, 228, 157);
+    border: solid black;
+    text-align: center;
+
+    padding: 20px 20px 15px 15px;
+}
+.grid-container{
+    display: grid;
+    align-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+    gap: 1em;
+}
+
+.grid-container>a{
+    background-color: yellowgreen;
+    border: solid black 1px;
+    text-align: center;
+
+
+    padding: 10px 10px 10px 10px;
+}
+
+.grid-container label{
+    background-color:bisque;
+    border: solid black 1px;
+    text-align: center;
+
+
+    padding: 10px 10px 10px 10px;
+}
+
+.container+h3{
+    background-color: rgb(228, 157, 157);
+    border: solid black 1px;
+    text-align: center;
+
+}
+
+.grid-container~div{
+    background-color: rgb(204, 228, 157);
+    border: solid black 1px;
+    text-align: center;
+    justify-content: space-around;
+
+
+}
+
+@media (min-width: 70rem) {
+    h3 {
+      background: yellow;
+    }
+}
+
+p.center {
+    text-align: center;
+    color: red;
+}
+
+p.large {
+    font-size: 300%;
+}
+
+#id {
+    text-align: center;
+    color: blueviolet;
+}
+
+li[target]{
+    font-size: 200%;
+}
+
+button:hover {
+    color: green;
+}
+
+section.h2{
+    text-align: center;
+    color: goldenrod;
 }
